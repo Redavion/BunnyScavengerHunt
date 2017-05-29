@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cs251.vandy.myfirstapp.MainActivity"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/relative"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/fullheart"
+        android:id="@+id/heart2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:adjustViewBounds="false" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/fullheart"
+        android:id="@+id/heart1"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/heart2" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/fullheart"
+        android:id="@+id/heart3"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/heart2" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MainText"
+        android:textSize="18sp"
+        android:layout_above="@+id/heart2"
+        android:layout_marginStart="34dp"
+        android:layout_alignParentStart="true" />
+
+
+    <Button
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:id="@+id/cookingpot"
+        android:layout_marginEnd="21dp"
+        android:background="@android:color/transparent"
+        android:layout_width="70dp"
+        android:layout_below="@+id/fab"
+        android:layout_alignEnd="@+id/heart3" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:id="@+id/freezer"
+        android:layout_marginTop="11dp"
+        android:layout_alignTop="@+id/fab"
+        android:layout_alignParentEnd="true"
+        android:background="@android:color/transparent" />
+
+    <ImageView
+        android:layout_width="87dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/arrow"
+        android:layout_below="@+id/MainText"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/rightArrow"
+        android:visibility="invisible" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="568dp"
+        android:src="@drawable/kitchen"
+        android:background="@drawable/kitchen"
+        android:id="@+id/kitchen"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

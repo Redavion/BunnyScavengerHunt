@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/relative"
+    tools:context="cs251.vandy.myfirstapp.MainActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include layout="@layout/content_main" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+
+    <Button
+        android:id="@+id/poster"
+        android:layout_width="220dp"
+        android:layout_height="140dp"
+        android:layout_weight=".5"
+        android:layout_marginTop="22dp"
+        android:layout_marginStart="34dp"
+        android:layout_alignTop="@+id/fab"
+        android:background="@android:color/transparent"
+        android:layout_alignStart="@+id/fab" />
+
+    <Button
+        android:id="@+id/pillow"
+        android:layout_width="78dp"
+        android:layout_height="35dp"
+        android:layout_weight=".5"
+        android:layout_marginTop="143dp"
+        android:layout_marginStart="15dp"
+        android:layout_below="@+id/poster"
+        android:background="@android:color/transparent"
+        android:layout_toEndOf="@+id/poster" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="568dp"
+        app:srcCompat="@drawable/bed"
+        android:src="@drawable/bed"
+        android:background="@drawable/bed"
+        android:id="@+id/bed"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/fullheart"
+        android:id="@+id/heart2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/fullheart"
+        android:id="@+id/heart1"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/heart2" />
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:srcCompat="@drawable/fullheart"
+        android:id="@+id/heart3"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/heart2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MainText"
+        android:textSize="18sp"
+        android:layout_above="@+id/heart2"
+        android:layout_alignStart="@+id/poster" />
+
+
+    <ImageView
+        android:layout_width="87dp"
+        android:layout_height="75dp"
+        app:srcCompat="@drawable/arrow"
+        android:layout_below="@+id/MainText"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/rightArrow"
+        android:visibility="invisible" />
+</RelativeLayout>

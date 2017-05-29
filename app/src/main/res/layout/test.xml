@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:text="What number is a factor of 14 and is a prime number? "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:id="@+id/question"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="11dp" />
+
+    <Button
+        android:text="Final Answer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/finalanswer"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_marginTop="18dp"
+        android:layout_below="@+id/answer"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="101dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberSigned"
+        android:ems="10"
+        android:background="#ffffff"
+        android:id="@+id/answer"
+        android:layout_marginTop="13dp"
+        android:layout_below="@+id/question"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
